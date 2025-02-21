@@ -9,10 +9,10 @@
     "AS4USER":"SAP_CUSTOMER",
     "AS4DATE":"0000-00-00",
     "AS4TIME":"00:00:00",
-    "SOURCE":"@EndUserText.label: 'Log Kayıt Action Parametre'\r\n@Metadata.allowExtensions: true\r\ndefine root abstract entity zco002_dd_log_kayit_param\r\n{\r\n//  @Consumption.valueHelpDefinition: [{ entity.name: 'I_CompanyCodeVH',entity.element: 'CompanyCode' }]\r\n  companycode      : bukrs;\r\n//  @Consumption.valueHelpDefinition: [{ entity.name: 'ZCO002_DD_FISCALPERIOD',entity.element: 'FiscalYearPeriod' }]\r\n  FiscalYearPeriod : fis_jahrper_conv;\r\n\r\n}\r\n/*+[internal] {\n\"BASEINFO\":\n{\n\"FROM\":\n[],\n\"ASSOCIATED\":\n[],\n\"BASE\":\n[],\n\"ANNO_REF\":\n[],\n\"SCALAR_FUNCTION\":\n[],\n\"VERSION\":0,\n\"ANNOREF_EVALUATION_ERROR\":\"\"\n}\n}*/",
+    "SOURCE":"@EndUserText.label: 'Log Kayıt Action Parametre'\r\n@Metadata.allowExtensions: true\r\ndefine root abstract entity zco002_dd_log_kayit_param\r\n{\r\n  @Consumption.valueHelpDefinition: [{ entity.name: 'ZCO002_DD_COMP_CODE',entity.element: 'CompanyCode' }]\r\n  company_code      : bukrs;\r\n  @Consumption.valueHelpDefinition: [{ entity.name: 'ZCO002_DD_FISCALPERIOD',entity.element: 'FiscalYearPeriod' }]\r\n  Fiscal_Year_Period : fis_jahrper_conv;\r\n\r\n}\r\n/*+[internal] {\n\"BASEINFO\":\n{\n\"FROM\":\n[],\n\"ASSOCIATED\":\n[],\n\"BASE\":\n[],\n\"ANNO_REF\":\n[],\n\"SCALAR_FUNCTION\":\n[],\n\"VERSION\":0,\n\"ANNOREF_EVALUATION_ERROR\":\"\"\n}\n}*/",
     "PARENTNAME":"",
     "ACTFLAG":"",
-    "CHGFLAG":"",
+    "CHGFLAG":"34",
     "SOURCE_TYPE":"A",
     "SOURCE_ORIGIN":"0",
     "ABAP_LANGUAGE_VERSION":"5"
@@ -41,6 +41,82 @@
     "DDLANGUAGE":"E",
     "AS4LOCAL":"N",
     "DDTEXT":"Log Kayıt Action Parametre"
+   }
+  ]
+ },
+ {
+  "table":"DDFIELDANNO",
+  "data":
+  [
+   {
+    "STRUCOBJN":"ZCO002_DD_LOG_KAYIT_PARAM",
+    "LFIELDNAME":"COMPANY_CODE",
+    "NAME":"CONSUMPTION",
+    "POSITION":1,
+    "VALUE":""
+   },
+   {
+    "STRUCOBJN":"ZCO002_DD_LOG_KAYIT_PARAM",
+    "LFIELDNAME":"COMPANY_CODE",
+    "NAME":"CONSUMPTION.VALUEHELPDEFINITION$1$.ENTITY",
+    "POSITION":2,
+    "VALUE":""
+   },
+   {
+    "STRUCOBJN":"ZCO002_DD_LOG_KAYIT_PARAM",
+    "LFIELDNAME":"COMPANY_CODE",
+    "NAME":"CONSUMPTION.VALUEHELPDEFINITION$1$.ENTITY",
+    "POSITION":4,
+    "VALUE":""
+   },
+   {
+    "STRUCOBJN":"ZCO002_DD_LOG_KAYIT_PARAM",
+    "LFIELDNAME":"COMPANY_CODE",
+    "NAME":"CONSUMPTION.VALUEHELPDEFINITION$1$.ENTITY.ELEMENT",
+    "POSITION":5,
+    "VALUE":"'CompanyCode'"
+   },
+   {
+    "STRUCOBJN":"ZCO002_DD_LOG_KAYIT_PARAM",
+    "LFIELDNAME":"COMPANY_CODE",
+    "NAME":"CONSUMPTION.VALUEHELPDEFINITION$1$.ENTITY.NAME",
+    "POSITION":3,
+    "VALUE":"'ZCO002_DD_COMP_CODE'"
+   },
+   {
+    "STRUCOBJN":"ZCO002_DD_LOG_KAYIT_PARAM",
+    "LFIELDNAME":"FISCAL_YEAR_PERIOD",
+    "NAME":"CONSUMPTION",
+    "POSITION":6,
+    "VALUE":""
+   },
+   {
+    "STRUCOBJN":"ZCO002_DD_LOG_KAYIT_PARAM",
+    "LFIELDNAME":"FISCAL_YEAR_PERIOD",
+    "NAME":"CONSUMPTION.VALUEHELPDEFINITION$1$.ENTITY",
+    "POSITION":7,
+    "VALUE":""
+   },
+   {
+    "STRUCOBJN":"ZCO002_DD_LOG_KAYIT_PARAM",
+    "LFIELDNAME":"FISCAL_YEAR_PERIOD",
+    "NAME":"CONSUMPTION.VALUEHELPDEFINITION$1$.ENTITY",
+    "POSITION":9,
+    "VALUE":""
+   },
+   {
+    "STRUCOBJN":"ZCO002_DD_LOG_KAYIT_PARAM",
+    "LFIELDNAME":"FISCAL_YEAR_PERIOD",
+    "NAME":"CONSUMPTION.VALUEHELPDEFINITION$1$.ENTITY.ELEMENT",
+    "POSITION":10,
+    "VALUE":"'FiscalYearPeriod'"
+   },
+   {
+    "STRUCOBJN":"ZCO002_DD_LOG_KAYIT_PARAM",
+    "LFIELDNAME":"FISCAL_YEAR_PERIOD",
+    "NAME":"CONSUMPTION.VALUEHELPDEFINITION$1$.ENTITY.NAME",
+    "POSITION":8,
+    "VALUE":"'ZCO002_DD_FISCALPERIOD'"
    }
   ]
  },

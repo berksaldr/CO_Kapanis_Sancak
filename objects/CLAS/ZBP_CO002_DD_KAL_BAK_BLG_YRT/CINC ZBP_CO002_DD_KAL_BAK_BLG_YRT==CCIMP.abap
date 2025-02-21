@@ -46,8 +46,8 @@ CLASS lhc_zco002_dd_kal_bak_blg_yrt IMPLEMENTATION.
   METHOD belge_yarat.
     DATA:lt_bakiye TYPE TABLE OF zco002_t_bakiye.
 
-    DATA(lv_companycode) = VALUE #( keys[ 1 ]-%param-companycode ).
-    DATA(lv_fiscalyearperiod) = VALUE #( keys[ 1 ]-%param-fiscalyearperiod ).
+    DATA(lv_companycode) = VALUE #( keys[ 1 ]-%param-company_code ).
+    DATA(lv_fiscalyearperiod) = VALUE #( keys[ 1 ]-%param-fiscal_year_period ).
 
     IF lv_fiscalyearperiod IS INITIAL OR lv_companycode IS INITIAL.
       DATA(lv_msg) = new_message_with_text( text = 'İşlem için parametre girilmelidir.' severity = cl_abap_behv=>ms-error ).
@@ -279,8 +279,8 @@ CLASS lhc_zco002_dd_kal_bak_blg_yrt IMPLEMENTATION.
   METHOD ters_kayit.
     DATA:lt_bakiye TYPE TABLE OF zco002_t_bakiye.
 
-    DATA(lv_companycode) = VALUE #( keys[ 1 ]-%param-companycode ).
-    DATA(lv_fiscalyearperiod) = VALUE #( keys[ 1 ]-%param-fiscalyearperiod ).
+    DATA(lv_companycode) = VALUE #( keys[ 1 ]-%param-company_code ).
+    DATA(lv_fiscalyearperiod) = VALUE #( keys[ 1 ]-%param-fiscal_year_period ).
 
     IF lv_fiscalyearperiod IS INITIAL OR lv_companycode IS INITIAL.
       DATA(lv_msg) = new_message_with_text( text = 'İşlem için parametre girilmelidir.' severity = cl_abap_behv=>ms-error ).
